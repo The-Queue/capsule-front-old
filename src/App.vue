@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <section class="logo">
+      <img src="./assets/logo.png">
+    </section>
+
+    <Search />
+    <CurrentlyPlaying />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CurrentlyPlaying from './components/CurrentlyPlaying.vue';
+import Search from './components/Search';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Search,
+    CurrentlyPlaying
   }
 }
 </script>
@@ -24,5 +30,18 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+body {
+  background: #2D3748;
+}
+
+section.logo > img {
+  width: 40%;
+  height: 40%;
+}
+
+section.search {
+  margin-top: 30px;
 }
 </style>
