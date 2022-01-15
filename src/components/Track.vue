@@ -21,9 +21,7 @@ export default {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    uri: this.track.uri
-                })
+                body: JSON.stringify(this.track)
             }).then(() => {
                 this.$emit('added');
             }).catch(() => {

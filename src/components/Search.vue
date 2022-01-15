@@ -38,6 +38,11 @@ export default {
         clearSearch() {
             this.searchText = '';
             this.tracks = [];
+        },
+
+        toggleQueue() {
+            console.log('test');
+            this.$router.push({ name: 'queue' });
         }
     }
 }

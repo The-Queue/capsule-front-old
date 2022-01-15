@@ -1,23 +1,28 @@
 <template>
   <div id="app">
-    <section class="logo">
+    <section v-if="$route.name === 'search'" v-on:click="toQueue" class="logo">
       <img src="./assets/logo.png">
     </section>
 
-    <Search />
-    <CurrentlyPlaying />
+    <router-view></router-view>
+    <CurrentlyPlaying v-on:click="toQueue" />
   </div>
 </template>
 
 <script>
 import CurrentlyPlaying from './components/CurrentlyPlaying.vue';
-import Search from './components/Search';
 
 export default {
   name: 'App',
+
   components: {
-    Search,
     CurrentlyPlaying
+  },
+
+  methods: {
+    toQueue() {
+      return this.$router.push({ name: 'queue' });
+    }
   }
 }
 </script>
@@ -29,7 +34,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {

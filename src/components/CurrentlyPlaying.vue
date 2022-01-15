@@ -6,7 +6,7 @@
         </section>
 
         <section class="skip">
-            <font-awesome-icon icon="forward">t</font-awesome-icon>
+            <font-awesome-icon icon="forward"></font-awesome-icon>
         </section>
     </section>
 </template>
