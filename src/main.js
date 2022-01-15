@@ -15,6 +15,6 @@ new Vue({
   router,
 
   beforeMount() {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('https://queue.nkir.ch/api/');
   }
 }).$mount('#app')

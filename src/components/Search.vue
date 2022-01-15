@@ -28,7 +28,7 @@ export default {
         search() {
             let q = new URLSearchParams();
             q.append('q', this.searchText);
-            fetch(`http://localhost:3000/search/?${q.toString()}`).then(res => {
+            fetch(`https://queue.nkir.ch/api/search/?${q.toString()}`).then(res => {
                 res.json().then(data => {
                     this.tracks = data.tracks.items;
                 });

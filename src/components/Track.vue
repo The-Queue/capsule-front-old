@@ -16,7 +16,7 @@ export default {
 
     methods: {
         queueTrack() {
-            fetch(`http://localhost:3000/queue/`, {
+            fetch(`http://queue.nkir.ch/api/queue/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

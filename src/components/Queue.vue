@@ -30,7 +30,7 @@ export default {
     },
 
     mounted() {
-        fetch('http://localhost:3000/queue/', {
+        fetch('http://queue.nkir.ch/api/queue/', {
             method: 'GET'
         }).then(res => {
             res.json().then(data => {
